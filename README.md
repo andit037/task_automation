@@ -1,7 +1,10 @@
 # task_automation Cucumber-framework (Webdriverio + Javascript)
-git clone
-npm install
-npx wdio run .\wdio.conf.js
+
+1. git clone
+
+2. npm install
+
+3. npx wdio run .\wdio.conf.js
 
 
 
