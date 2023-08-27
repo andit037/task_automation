@@ -51,7 +51,10 @@ exports.config = {
     // https://saucelabs.com/platform/platform-configurator
     //
     capabilities: [{
-        browserName: 'chrome'
+        browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: ['headless', 'disable-gpu']
+        }
     }],
 
     //
@@ -129,8 +132,26 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec',['allure', {outputDir: 'allure-results'}]],
+    reporters: 
+            ['spec',
+                // [
+                //     'allure', 
+                //     {
+                //         outputDir: 'allure-results'
+                //     }
+                // ],
 
+            
+        ['junit', {
+            outputDir: 'junit-reports',
+            outputFileFormat: function(options) { // optional
+                //return `results-${new Date().getTime()}.xml`
+                return `results-${options.cid}.${options.capabilities}.xml`
+            }
+        }]
+    
+            ],
+        
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
