@@ -10,4 +10,4 @@ Feature: The Cermati Website
 
     Examples: 
       | email | no_handphone | katasandi  | ulangikatasandi | nama_depan | nama_belakang | kabupaten_kota     | message                 | message_text      |
-      | test  | 082314411546 | fguu231!@V | fguu231!@V      | resa       | wibowo        | KOTA JAKARTA BARAT | Pilih Metode Verifikasi | Kode OTP Terkirim |
+      | test  | 082314411546 | fguu231!@V | fguu231!@V      | resa       | wibowo        | KOTA JAKARTA BARAT | Pilih Metode Verifikasi | Ko Terkirim |
